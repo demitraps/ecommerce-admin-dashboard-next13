@@ -1,34 +1,134 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+# Full Stack Next.js 13 Admin Dashboard & CMS for E-Commerce Store | Next.js 13 App Router, React, Tailwind, Prisma, MySQL
 
-First, run the development server:
+This is the repository for a fully functioning [Admin Dashboard & CMS](https://ecommerce-admin-dashboard-next13-seven.vercel.app/).
+
+Find the Github repository for the E-Commerce store here: https://github.com/demitraps/ecommerce-store-next13
+
+## Features
+
+- Create Multiple Stores
+- Dashboard with stats
+- Create billboards per different category
+- Sizes/Colors
+- Products linked to sizes, colors, billboards
+- Archive/feature product
+- Edit/Delete billboards, categories, sizes, colors
+- Orders page with payment status
+- API calls for Billboards, Categories, Sizes, Colors, Products
+- Light and Dark mode
+   
+## Tech Stack
+
+**React, Next.JS 13, TypeScript, TailwindCSS**
+
+**Authentication:** Clerk
+**Data validation:** Zod
+**FileUploads:** Cloudinary
+**Components:** Shadcn
+**Database:** MySQL-PlanetScale with Prisma ORM
+
+## Sign-in
+https://ecommerce-admin-dashboard-next13-seven.vercel.app/
+
+## Demo
+
+Product creation: 
+
+![App Screenshot](./demo/demo.gif)
+
+and in store: 
+
+![App Screenshot](./demo/store.gif)
+
+
+## Screenshots
+
+Homepage:
+
+![App Screenshot](./demo/homepage.png)
+
+Create store:
+
+![App Screenshot](./demo/createstore.png)
+
+Billboards:
+
+![App Screenshot](./demo/billboard.png)
+
+Create billboard:
+
+![App Screenshot](./demo/createbillboard.png)
+
+Categories:
+
+![App Screenshot](./demo/categories.png)
+
+Sizes:
+
+![App Screenshot](./demo/sizes.png)
+
+Colors:
+
+![App Screenshot](./demo/colors.png)
+
+Products:
+
+![App Screenshot](./demo/products.png)
+
+Create product:
+
+![App Screenshot](./demo/createproduct.png)
+
+Orders:
+
+![App Screenshot](./demo/orders.png)
+
+Settings:
+
+![App Screenshot](./demo/settingsstore.png)
+
+Light mode:
+
+![App Screenshot](./demo/lightmode.png)
+
+## To-Do List
+
+- Multiple quantities per product
+- Email notifications
+- Video uploads
+- Newsletters
+- Additional stats
+- Mark orders as complete
+- Add tracking
+
+
+### Prerequisites
+
+**Node version 14.x**
+
+### Cloning the repository
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+  git clone https://github.com/demitraps/ecommerce-admin-dashboard-next13.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Connect to PlanetScale and Push Prisma
+```shell
+npx prisma generate
+npx prisma db push
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Start the app
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+```shell
+npm run dev
+```
 
-## Learn More
+## Available commands
 
-To learn more about Next.js, take a look at the following resources:
+Running commands with npm `npm run [command]`
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+| command         | description                              |
+| :-------------- | :--------------------------------------- |
+| `dev`           | Starts a development instance of the app |
